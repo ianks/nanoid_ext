@@ -18,7 +18,7 @@ nanoid_generate(int argc, VALUE* argv, VALUE self)
 
 extern "C"
 void
-Init_nanoid_ext(void)
+Init_ext(void)
 {
   rb_mNanoid = rb_define_module("Nanoid");
   rb_define_module_function(rb_mNanoid, "generate", nanoid_generate, -1);

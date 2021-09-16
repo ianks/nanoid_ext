@@ -28,7 +28,7 @@ def build_libnanoid
     FileUtils.mkdir_p 'build'
 
     Dir.chdir 'build' do
-      sys 'cmake  -DBUILD_SHARED_LIBS=OFF ..'
+      sys 'cmake -DBUILD_CLAR=OFF -DBUILD_SHARED_LIBS=OFF -DCMAKE_C_FLAGS=-fPIC -DCMAKE_BUILD_TYPE=RelWithDebInfo ..'
       sys MAKE
     end
   end
@@ -40,4 +40,4 @@ end
 
 install_deps
 build_libnanoid
-create_makefile('nanoid_ext/nanoid_ext')
+create_makefile('nanoid/ext')
