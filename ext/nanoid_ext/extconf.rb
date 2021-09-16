@@ -1,6 +1,6 @@
 require 'mkmf'
 
-$CXXFLAGS << ' -std=c++11 '
+$CXXFLAGS << ' -std=c++11 -fPIC '
 
 MAKE =
   if Gem.win_platform?
@@ -28,7 +28,7 @@ def build_libnanoid
     FileUtils.mkdir_p 'build'
 
     Dir.chdir 'build' do
-      sys 'cmake -DBUILD_CLAR=OFF -DBUILD_SHARED_LIBS=OFF -DCMAKE_C_FLAGS=-fPIC -DCMAKE_BUILD_TYPE=RelWithDebInfo ..'
+      sys 'cmake -DBUILD_CLAR=OFF -DBUILD_SHARED_LIBS=OFF -DCMAKE_CXX_FLAGS=-fPIC -DCMAKE_BUILD_TYPE=RelWithDebInfo ..'
       sys MAKE
     end
   end
