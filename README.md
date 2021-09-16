@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install nanoid_native
+    $ gem install nanoid_ext
 
 ## Usage
 

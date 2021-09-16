@@ -9,7 +9,7 @@ MAKE =
     find_executable('gmake') || find_executable('make')
   end
 
-LIBNANOID_DIR = File.join(__dir__, './../vendor/nanoid_cpp')
+LIBNANOID_DIR = File.join(__dir__, './../../vendor/nanoid_cpp')
 
 def sys(cmd)
   puts " -- #{cmd}"

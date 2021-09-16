@@ -4,5 +4,5 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'rake', '~> 12.0'
-gem 'rake-compiler'
+gem 'rake-compiler', github: 'rake-compiler/rake-compiler'
 gem 'rspec', '~> 3.0'
